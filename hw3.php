@@ -77,7 +77,7 @@ class User extends Client implements Human{
         return $this->id;
     }
 
-    function __destructor() {
+    function __destruct() {
         echo "User #".strval($this->id)." (type ".$this->get_type().") destructed!\n";
     }
 }
@@ -121,7 +121,9 @@ C - green eyes
 1 -> height >=200
 2 -> 180 < height < 200
 3 -> height <= 180
-
+User #0 (type B3) destructed!
+User #1 (type C2) destructed!
+User #3 (type A3) destructed!
 
 */
 
